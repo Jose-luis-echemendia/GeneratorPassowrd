@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+<div class="col-md-4 offset-md-4">
+
+    <form action="{% url 'password' %}" class="card card-body pd-5 form form-group">
+        <label for="length"> select the length of your password:</label>
+        <select name="length" id="length" class="form-control">
+            <option value="6" class="">6 characters</option>
+            <option value="8" class="">8 characters</option>
+            <option value="10" class="">10 characters</option>
+            <option value="14" class="">14 characters</option>
+            <option value="16" class="">16 characters</option>
+
+
+        </select>
+
+        <div class="form-check form-switch my-2">
+            <input class="form-check-input" type="checkbox" role="switch" id="uppercase" name="uppercase">
+            <label class="form-check-label" for="uppercase" id="uppercase">uppercase</label>
+        </div>
+        <div class="form-check form-switch my-2">
+            <input class="form-check-input" type="checkbox" role="switch" id="special" name="special" >
+            <label class="form-check-label" for="specialCharacters" id="specialCharacters">Special characters</label>
+        </div>
+        <div class="form-check form-switch my-2">
+            <input class="form-check-input" type="checkbox" role="switch"  id="numbers" name="numbers">
+            <label class="form-check-label" for="numbers">numbers</label>
+        </div>
+
+
+
+
+        <button class="btn btn-primary">Generator password</button>
+
+
+    </form>
+
+</div>
+{% endblock %}
